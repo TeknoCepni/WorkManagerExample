@@ -8,6 +8,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val sharedPreference = SharedPreference(this)
+        switch1.isChecked = sharedPreference.checkPrefs()
 
+        switch1.setOnCheckedChangeListener { _, isChecked ->
+            if (!isChecked) {
+                sharedPreference.changeSwitch(false)
+            } else {
+                sharedPreference.changeSwitch(true)
+            }
+        }
     }
 }
