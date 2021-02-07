@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WorkManagerExample</string>
+    <string name="warning">If this switch is turned off, it will be turned on after a while.</string>
+</resources>
