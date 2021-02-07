@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun createWorker() {
         val workRequest: WorkRequest =
                 OneTimeWorkRequestBuilder<SwitchControlWorker>()
-                        .setInitialDelay(5, TimeUnit.MINUTES)
+                        .setInitialDelay(1, TimeUnit.HOURS)//It will run after 1 hour.
                         .build()
 
         WorkManager
